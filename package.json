@@ -1,0 +1,13 @@
+{
+  "name": "capacitor-original-version",
+  "version": "1.0.0",
+  "description": "Get original version from App Store receipt",
+  "main": "dist/plugin.js",
+  "types": "dist/index.d.ts",
+  "author": "below43",
+  "license": "MIT",
+  "files": [
+    "dist/",
+    "ios/"
+  ]
+}
