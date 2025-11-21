@@ -1,11 +1,8 @@
 import { registerPlugin } from '@capacitor/core';
 
-export interface OriginalVersionResult {
-  version: string | null;
-}
-
 export interface OriginalVersionPlugin {
-  getOriginalVersion(): Promise<OriginalVersionResult>;
+  getOriginalAppVersion(): Promise<{ version: string }>;
+  getOriginalPurchaseDate(): Promise<{ date: string }>;
 }
 
 export const OriginalVersion = registerPlugin<OriginalVersionPlugin>(
