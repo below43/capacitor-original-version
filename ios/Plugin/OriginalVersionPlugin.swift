@@ -3,9 +3,15 @@ import Capacitor
 import StoreKit
 
 @objc(OriginalVersionPlugin)
-public class OriginalVersionPlugin: CAPPlugin {
+public class OriginalVersionPlugin: CAPPlugin, CAPBridgedPlugin {
+    public let identifier = "OriginalVersionPlugin"
+    public let jsName = "OriginalVersion"
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "getOriginalVersion", returnType: CAPPluginReturnPromise)
+    ]
+    
     @objc func getOriginalVersion(_ call: CAPPluginCall) {
-        if #available(iOS 15.0, *) {
+        if #available(iOS 16.0, *) {
             Task {
                 do {
                     let result = try await AppTransaction.shared
@@ -20,7 +26,7 @@ public class OriginalVersionPlugin: CAPPlugin {
                 }
             }
         } else {
-            call.reject("iOS 15+ required")
+            call.reject("iOS 16+ required")
         }
     }
 }
