@@ -1,21 +1,32 @@
 {
-    "name": "capacitor-original-version",
-    "version": "1.0.1",
-    "description": "Get original version from App Store receipt",
-    "main": "src/index.ts",
-    "types": "src/index.ts",
-    "author": "below43",
-    "license": "MIT",
-    "files": [
-        "src/",
-        "ios/"
-    ],
-    "peerDependencies": {
-        "@capacitor/core": "^7.0.0"
-    },
-    "capacitor": {
-        "ios": {
-            "src": "ios"
-        }
-    }
+	"name": "capacitor-original-version",
+	"version": "7.0.0",
+	"description": "Capacitor plugin to get original app version and purchase date",
+	"main": "src/index.ts",
+	"types": "src/index.ts",
+	"files": [
+		"ios/",
+		"CapacitorOriginalVersion.podspec",
+		"src/"
+	],
+	"author": "Andrew Drake",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/below43/capacitor-original-version"
+	},
+	"keywords": [
+		"capacitor",
+		"plugin",
+		"ios",
+		"app-version"
+	],
+	"peerDependencies": {
+		"@capacitor/core": "^7.0.0"
+	},
+	"capacitor": {
+		"ios": {
+			"src": "ios"
+		}
+	}
 }
