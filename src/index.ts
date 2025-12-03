@@ -1,10 +1,11 @@
 import { registerPlugin } from '@capacitor/core';
-
-export interface OriginalVersionPlugin {
-  getOriginalAppVersion(): Promise<{ version: string }>;
-  getOriginalPurchaseDate(): Promise<{ date: string }>;
-}
+import type { OriginalVersionPlugin } from './definitions';
 
 export const OriginalVersion = registerPlugin<OriginalVersionPlugin>(
-  'OriginalVersion'
+  'OriginalVersion',
+  {
+    web: () => import('./web').then(m => new m.OriginalVersionWeb()),
+  }
 );
+
+export * from './definitions';
