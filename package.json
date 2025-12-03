@@ -1,6 +1,6 @@
 {
     "name": "capacitor-original-version",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Get original version from App Store receipt",
     "main": "src/index.ts",
     "types": "src/index.ts",
