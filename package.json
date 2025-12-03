@@ -2,13 +2,17 @@
 	"name": "capacitor-original-version",
 	"version": "7.0.0",
 	"description": "Capacitor plugin to get original app version and purchase date",
-	"main": "src/index.ts",
-	"types": "src/index.ts",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
 	"files": [
+		"dist/",
 		"ios/",
-		"CapacitorOriginalVersion.podspec",
-		"src/"
+		"CapacitorOriginalVersion.podspec"
 	],
+	"scripts": {
+		"build": "tsc"
+	},
 	"author": "Andrew Drake",
 	"license": "MIT",
 	"repository": {
@@ -28,5 +32,8 @@
 		"ios": {
 			"src": "ios"
 		}
+	},
+	"devDependencies": {
+		"typescript": "^5.9.3"
 	}
 }
