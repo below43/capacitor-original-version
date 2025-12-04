@@ -1,15 +1,15 @@
-# capacitor-original-version
+# @below43/capacitor-original-version
 
 A Capacitor plugin to retrieve the original app version and purchase date from the App Store receipt using StoreKit 2.
 
-[![npm](https://img.shields.io/npm/v/capacitor-original-version)](https://www.npmjs.com/package/capacitor-original-version)
+[![npm](https://img.shields.io/npm/v/@below43/capacitor-original-version)](https://www.npmjs.com/package/@below43/capacitor-original-version)
 
 > **Note:** This plugin is currently only available for iOS. Android and web platforms are not supported.
 
 ## Installation
 
 ```bash
-npm i capacitor-original-version
+npm i @below43/capacitor-original-version
 npx cap sync
 ```
 
